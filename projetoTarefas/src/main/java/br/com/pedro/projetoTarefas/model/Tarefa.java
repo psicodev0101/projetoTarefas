@@ -1,6 +1,5 @@
 package br.com.pedro.projetoTarefas.model;
 
-
 import java.time.LocalDate;
 
 public class Tarefa {
@@ -16,6 +15,9 @@ public class Tarefa {
     private TarefaCategoria categoria;
 
     private Usuario usuario;
+
+
+
 
     public String getDescricao() {
         return descricao;
