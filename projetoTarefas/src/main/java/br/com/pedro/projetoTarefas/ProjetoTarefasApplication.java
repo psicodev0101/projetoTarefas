@@ -10,4 +10,10 @@ public class ProjetoTarefasApplication {
 		SpringApplication.run(ProjetoTarefasApplication.class, args);
 	}
 
+
+	/*finalizei na ultima vez a transformacao das classes em entidades na aula
+	* DBEJS - 02 - 02, na proxima devera ser feita a implementacao dos relacionamentos
+	* dentro da classe Tarefa*/
+
+
 }
