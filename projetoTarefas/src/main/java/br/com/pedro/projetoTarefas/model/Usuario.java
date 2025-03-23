@@ -6,6 +6,8 @@ public class Usuario {
 
     private String senha;
 
+
+
     public String getNome() {
         return nome;
     }
