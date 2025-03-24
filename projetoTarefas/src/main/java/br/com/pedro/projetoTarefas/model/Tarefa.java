@@ -1,23 +1,48 @@
 package br.com.pedro.projetoTarefas.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity /*transforma a classe em uma entidade*/
+@Table /*permite manipular prop. da tabela*/ (name = "TAREFAS")/*altera o nome*/
 public class Tarefa {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @Column (name = "DS_TAREFA", nullable = false, length = 150)
+    /*marca o atributo como coluna, proibe valores nulos, limita o tamanho da entrada*/
     private String descricao;
 
+    @Enumerated(EnumType.STRING)
+    /*marca como tipo enumerado String*/
     private TarefaStatus status;
 
     private LocalDate dataEntrega;
 
     private boolean visivel;
 
+    @ManyToOne
+    /*define a relacao entre a classe atual (tarefa) e o tipo do atributo (TarefaCategoria) como uma relacao
+    * de muitos pra um, partindo no sentido de muitas (tarefas) para uma categoria (TarefaCategoria)*/
+    @JoinColumn(nullable = false)
+    /*instancia automaticamente a coluna de juncao entre ambas as entidades*/
     private TarefaCategoria categoria;
 
+    @ManyToOne
+    @JoinColumn(nullable = false)
     private Usuario usuario;
 
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getDescricao() {
         return descricao;

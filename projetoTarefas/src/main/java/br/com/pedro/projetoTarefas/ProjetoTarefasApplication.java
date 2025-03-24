@@ -10,4 +10,9 @@ public class ProjetoTarefasApplication {
 		SpringApplication.run(ProjetoTarefasApplication.class, args);
 	}
 
+
+	/*finalizei o mapeamento das entidades conforme aula 02-04, ficou faltando a implementacao de Roles
+	* e ERoles, ficar de olho nisso pra ver como o professor vai proceder*/
+
+
 }
