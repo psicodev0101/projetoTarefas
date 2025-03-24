@@ -24,9 +24,16 @@ public class Tarefa {
 
     private boolean visivel;
 
-//    private TarefaCategoria categoria;
-//
-//    private Usuario usuario;
+    @ManyToOne
+    /*define a relacao entre a classe atual (tarefa) e o tipo do atributo (TarefaCategoria) como uma relacao
+    * de muitos pra um, partindo no sentido de muitas (tarefas) para uma categoria (TarefaCategoria)*/
+    @JoinColumn(nullable = false)
+    /*instancia automaticamente a coluna de juncao entre ambas as entidades*/
+    private TarefaCategoria categoria;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Usuario usuario;
 
 
     public Integer getId() {
@@ -69,19 +76,19 @@ public class Tarefa {
         this.visivel = visivel;
     }
 
-//    public TarefaCategoria getCategoria() {
-//        return categoria;
-//    }
-//
-//    public void setCategoria(TarefaCategoria categoria) {
-//        this.categoria = categoria;
-//    }
-//
-//    public Usuario getUsuario() {
-//        return usuario;
-//    }
-//
-//    public void setUsuario(Usuario usuario) {
-//        this.usuario = usuario;
-//    }
+    public TarefaCategoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(TarefaCategoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

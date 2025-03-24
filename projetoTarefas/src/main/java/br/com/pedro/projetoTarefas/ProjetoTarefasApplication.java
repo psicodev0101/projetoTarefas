@@ -11,9 +11,8 @@ public class ProjetoTarefasApplication {
 	}
 
 
-	/*finalizei na ultima vez a transformacao das classes em entidades na aula
-	* DBEJS - 02 - 02, na proxima devera ser feita a implementacao dos relacionamentos
-	* dentro da classe Tarefa*/
+	/*finalizei o mapeamento das entidades conforme aula 02-04, ficou faltando a implementacao de Roles
+	* e ERoles, ficar de olho nisso pra ver como o professor vai proceder*/
 
 
 }
